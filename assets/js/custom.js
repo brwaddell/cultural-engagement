@@ -88,12 +88,12 @@ jQuery(function($) {
   /* ------ Countdown ----- */
 
   $('#countdown').countdown({
-      date: '12/12/2020 12:00:00',
+      date: '12/12/2021 12:00:00',
       offset: +2,
     day: 'Day',
     days: 'Days'
   }, function () {
-      alert('Done!');
+      
   });
 
 
@@ -108,24 +108,3 @@ jQuery(function($) {
 
 
     /*----- Subscription Form ----- */
-
-    $(document).ready(function() {
-         // jQuery Validation
-         $("#chimp-form").validate({
-             // if valid, post data via AJAX
-             submitHandler: function(form) {
-                 $.post("assets/php/subscribe.php", { email: $("#chimp-email").val() }, function(data) {
-                     $('#response').html(data);
-                 });
-             },
-             // all fields are required
-             rules: {
-                 email: {
-                     required: true,
-                     email: true
-                 }
-             }
-         });
-     });
-
-});
